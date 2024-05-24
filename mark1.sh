@@ -55,7 +55,7 @@ rename_directory="$download_temp/rename"
 mkdir -p "$rename_directory"
 
 # Step 1: Download music from YouTube playlist
-yt-dlp -i -f ba -x --geo-bypass --download-archive "$download_temp/music_download.archive" --embed-thumbnail -o "$download_temp/%(playlist_index)s. %(title)s [%(id)s].%(ext)s" "https://youtube.com/playlist?list=PLXFzz_xH35n39TzOIWmJqDVbQJmPLttEZ"
+yt-dlp -i -f ba -x --geo-bypass --download-archive "$download_temp/music_download.archive" --embed-thumbnail -o "$download_temp/%(playlist_index)s. %(title)s [%(id)s].%(ext)s" "YOUTUBE PLAYLIST URL"
 
 # Move downloaded opus files to rename folder
 find "$download_temp" -type f -name "*.opus" -exec mv {} "$rename_directory" \;
